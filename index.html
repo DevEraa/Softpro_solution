@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTPRO - Software Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Style.css">
+    <script src="./Main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-white select-none">
+<!-- Loader HTML -->
+<div class="loader" id="pageLoader">
+    <div class="spinner"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-4">
+                    <img src="./logo.jpg" alt="logo" class="rounded-full w-10 h-10">
+                    <a href="#" class="text-2xl font-bold text-red-600">Softpro</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-red-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-red-600 transition-colors">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-red-600 transition-colors">Services</a>
+                    <a href="#Industries" class="text-gray-600 hover:text-red-600 transition-colors">Industries</a>
+                    <a href="#Technologies" class="text-gray-600 hover:text-red-600 transition-colors">Technologies</a>
+                    <a href="#career" class="text-gray-600 hover:text-red-600 transition-colors">Career</a>
+                    <a href="#contact" class="px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">
+                        Contact
+                    </a>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-red-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t transform origin-top transition-transform duration-300">
+                <div class="px-4 py-4 space-y-4">
+                    <a href="#home" class="block text-gray-600 hover:text-red-600">Home</a>
+                    <a href="#about" class="block text-gray-600 hover:text-red-600">About Us</a>
+                    <a href="#services" class="block text-gray-600 hover:text-red-600">Services</a>
+                    <a href="#Industries" class="block text-gray-600 hover:text-red-600">Industries</a>
+                    <a href="#Technologies" class="block text-gray-600 hover:text-red-600">Technologies</a>
+                    <a href="#career" class="block text-gray-600 hover:text-red-600">Career</a>
+                    <a href="#contact" class="block px-4 py-2 bg-red-600 text-white text-center rounded-full hover:bg-red-700">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen bg-gradient-to-r from-red-50 to-red-100 pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between py-16">
+                <!-- Left Content -->
+                <div class="md:w-1/2 mb-12 md:mb-0 fade-in-up">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                        Transform Your Business With
+                        <span class="text-red-600">Smart</span> Solutions
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We craft innovative software solutions that drive growth and efficiency for businesses
+                        worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="px-8 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">
+                            Get Started
+                        </a>
+                        <a href="#"
+                            class="px-8 py-3 border-2 border-red-600 text-red-600 rounded-full hover:bg-red-50 transition-colors">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Image -->
+                <div class="md:w-1/2 fade-in-up">
+                    <div
+                        class="relative bg-red-200 rounded-xl p-8 h-96 transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="absolute inset-0 bg-red-500 opacity-10 rounded-xl"></div>
+                        <img src="./home.png" alt="Software Development"
+                            class="w-full h-full object-cover rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- About Company Section -->
+     <section id="about" class="py-24 bg-red-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-20 fade-in-up">
+                <span class="text-red-600 font-semibold uppercase tracking-wide">Who We Are</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-800">
+                    Transforming Ideas Into <span class="text-red-600">Digital Reality</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-in-up">
+                <!-- Left Content -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-duration="800">
+                    <p class="text-lg text-gray-600">
+                        At <span class="text-red-600 font-semibold">SOFTPRO</span>, we're more than just developers -
+                        we're strategic partners in digital innovation. Since 2004, we've been helping businesses
+                        leverage technology to solve complex challenges and achieve remarkable growth.
+                    </p>
+
+                    <!-- Key Points -->
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Proven Expertise</h3>
+                                <p class="text-gray-600">5124+ successful projects delivered across multiple industries
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Secure Solutions</h3>
+                                <p class="text-gray-600">ISO-certified development process with enterprise-grade
+                                    security</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Agile Approach</h3>
+                                <p class="text-gray-600">Flexible development methodology for fast-paced environments
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="relative bg-white rounded-2xl shadow-xl p-8">
+                    <div class="aspect-w-5 aspect-h-3">
+                        <img src="./123.avif" alt="Our Team" class="rounded-lg object-cover w-full h-full">
+                    </div>
+
+                    <!-- Stats Overlay -->
+                    <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-red-600 text-white rounded-xl shadow-lg px-8 py-4 flex divide-x divide-red-100">
+                            <div class="text-center pr-6">
+                                <div class="text-2xl font-bold">21</div>
+                                <div class="text-sm">Years Experience</div>
+                            </div>
+                            <div class="text-center pl-6">
+                                <div class="text-2xl font-bold">97%</div>
+                                <div class="text-sm">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Gradient Cards -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <span class="text-red-600 font-semibold uppercase tracking-wide">What We Offer</span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-bold text-gray-800">
+                    Comprehensive <span
+                        class="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Digital
+                        Solutions</span>
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Design -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="w-16 h-16 mb-6 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Web Design</h3>
+                        <p class="text-gray-600 mb-6">Captivating designs that engage users and enhance brand identity
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Responsive Layouts
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                UI/UX Optimization
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Prototyping
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="w-16 h-16 mb-6 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Web Development</h3>
+                        <p class="text-gray-600 mb-6">Robust web applications with modern technologies</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Full-stack Development
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                E-commerce Solutions
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                CMS Integration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="w-16 h-16 mb-6 bg-gradient-to-br from-red-600 to-red-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-6">Native and cross-platform mobile solutions</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                iOS & Android
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                React Native
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                API Integration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- About Section -->
+     <section class="py-24 bg-white" data-aos="fade-up" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading -->
+            <div class="text-center mb-20" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-red-600 font-semibold uppercase tracking-wide" data-aos="fade-up"
+                    data-aos-delay="300">About Us</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-800" data-aos="fade-up" data-aos-delay="400">
+                    Driving <span class="text-red-600">Digital Transformation</span><br>
+                    Through Innovation
+                </h2>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- All Features -->
+                <div class="custom-card p-6 bg-red-50 rounded-xl hover:bg-red-100 transition-colors group"
+                    data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div class="flex items-center justify-center w-full h-40 mb-4">
+                        <img src="./bazar.png" class="w-30 h-30 object-contain" alt="Mandi Software Icon">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mandi (APMC) Software</h3>
+                    <p class="text-gray-600">Digitize APMC operations with real-time commodity pricing, farmer-vendor
+                        portals, and inventory tracking for streamlined agri-trade management.</p>
+                </div>
+
+                <div class="custom-card p-6 bg-red-50 rounded-xl hover:bg-red-100 transition-colors group"
+                    data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div class="flex items-center justify-center w-full h-40 mb-4 p-10">
+                        <img src="./Manufacturing.png" class="w-30 h-30 object-contain"
+                            alt="Manufacturing Software Icon">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Manufacturing Software</h3>
+                    <p class="text-gray-600">Optimize factory workflows with ERP modules for inventory, production
+                        planning, quality control, and real-time machine monitoring.</p>
+                </div>
+
+                <div class="custom-card p-6 bg-red-50 rounded-xl hover:bg-red-100 transition-colors group"
+                    data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div class="flex items-center justify-center w-full h-40 mb-4">
+                        <img src="./Distribution.png" class="w-30 h-30 object-contain" alt="Distribution Software Icon">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Distribution</h3>
+                    <p class="text-gray-600">Automate order processing, track deliveries, manage inventory, and
+                        integrate with vendors and logistics partners via a centralized platform.</p>
+                </div>
+
+                <div class="custom-card p-6 bg-red-50 rounded-xl hover:bg-red-100 transition-colors group"
+                    data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div class="flex items-center justify-center w-full h-40 mb-4">
+                        <img src="./retail.png" class="w-30 h-30 object-contain" alt="Retail Software Icon">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Retail Chain Software</h3>
+                    <p class="text-gray-600">Manage multi-store operations with POS integration, inventory sync,
+                        customer loyalty programs, and sales analytics in one dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries section -->
+    <section id="Industries" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <!-- Industries We Serve -->
+            <div class="mt-20 fade-in-up">
+                <div class="text-center mb-12">
+                    <span class="text-red-600 font-semibold uppercase tracking-wide">Industries We Serve</span>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-800">
+                        Tailored Solutions for <span class="text-red-600">Your Industry</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Trade List -->
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Grain Merchants</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Kirana Stores</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Brokerage Firms</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Super Markets</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Garment & Cloth Stores</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">FMCG & Distribution</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Jewelry Shops</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">General Stores</span>
+                    </div>
+
+                    <div class="p-4 bg-red-50 rounded-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-800">Printers & Stationery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <!-- [Keep existing CTA here] -->
+        </div>
+    </section>
+
+    <!-- Technologies Section - Minimal Grid -->
+    <section id="Technologies" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Technologies <span class="text-red-600">We Master</span>
+                </h2>
+                <p class="text-xl text-gray-600">Cutting-edge tools powering digital innovation</p>
+            </div>
+
+            <!-- Technology Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend Technologies -->
+                <div class="p-6 border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/react.png" class="w-10 h-10 mr-2" alt="React">
+                            <span class="text-sm font-medium text-gray-700">React</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/angular.png" class="w-10 h-10 mr-2" alt="Angular">
+                            <span class="text-sm font-medium text-gray-700">Angular</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/veujs.webp" class="w-8 h-8 mr-2" alt="Vue">
+                            <span class="text-sm font-medium text-gray-700">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="p-6 border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/node.png" class="w-10 h-8 mr-2" alt="Node.js">
+                            <span class="text-sm font-medium text-gray-700">Node.js</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/djabgo.png" class="w-10 h-10 mr-2" alt="Django">
+                            <span class="text-sm font-medium text-gray-700">Django</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/laravel.png" class="w-10 h-10 mr-2" alt="Laravel">
+                            <span class="text-sm font-medium text-gray-700">Laravel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="p-6 border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Database</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/mongo.svg" class="w-10 h-10 mr-2" alt="MongoDB">
+                            <span class="text-sm font-medium text-gray-700">MongoDB</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/postgrred.jpg" class="w-10 h-10 mr-2" alt="PostgreSQL">
+                            <span class="text-sm font-medium text-gray-700">PostgreSQL</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/sql.webp" class="w-10 h-10 mr-2" alt="MySQL">
+                            <span class="text-sm font-medium text-gray-700">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps Technologies -->
+                <div class="p-6 border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">DevOps</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/aws.png" class="w-10 h-10 mr-2" alt="AWS">
+                            <span class="text-sm font-medium text-gray-700">AWS</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/docker.png" class="w-13 h-10 mr-2" alt="Docker">
+                            <span class="text-sm font-medium text-gray-700">Docker</span>
+                        </div>
+                        <div class="px-4 py-2 bg-gray-100 rounded-full flex items-center">
+                            <img src="./techlogos/kuburnetes.png" class="w-15 h-8 mr-2" alt="Kubernetes">
+                            <span class="text-sm font-medium text-gray-700">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fearture section -->
+    <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
+            Smart Business
+            <span class="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Integrations</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Modern solutions for seamless business operations
+        </p>
+    </div>
+    <!-- 1st row -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 - Collaborative Commerce -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <!-- Image Container -->
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-44452,resizemode-75,msid-91681300/small-biz/policy-trends/cci-will-dampen-indias-financial-inclusion-goals-by-narrowing-the-relevant-market-for-c-commerce.jpg"
+                            alt="Collaborative Commerce"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <!-- Image Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                        <!-- Top Badge -->
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-red-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            Collaborative Commerce
+                        </span>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">
+                                Collaborative commerce is the most recent platform wherein users can upload and download
+                                their invoices, with all mismatch conditions being completely eradicated through this
+                                system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - E-Invoicing -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://cdn.techjockey.com/blog/wp-content/uploads/2019/05/26173304/Benefits-of-Online-Invoicing-for-Small-Businesses.jpg?d=390"
+                            alt="E-Invoicing"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            E-Invoicing
+                        </span>
+                    </div>
+
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">
+                                Electronically upload B2B invoices authenticated by Invoice Registration Portal (IRP).
+                                Export invoices and Credit/Debit Notes for use on the common GST portal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Purchase & Sale Claim -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://media.istockphoto.com/id/1175268602/vector/calendar-and-money-as-payment-date-reminder-vector-illustration-flat-cartoon-cash-schedule.jpg?s=612x612&w=0&k=20&c=DMYVRpAaY8RnXa8qF5LpDyUFiGWo5UWnIbwMUokcYZg="
+                            alt="Purchase & Sale Claim"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            Purchase & Sale Claim
+                        </span>
+                    </div>
+
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">
+                                The advanced feature Claims & Statements allows you to track benefits of claims against
+                                purchases. Get timely reminders to ensure you don't miss any deal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 2nd row -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 - Auto Cloud Backup -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKeH_StZJ4xIQFpWK0eIyc1f85uKFcWDNN3aVC9CzKjoH_MYKPXYgE993agibtvL3nP4&usqp=CAU"
+                            alt="Auto Cloud Backup"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            Auto-Cloud Backup
+                        </span>
+                    </div>
+                    <div class="bg-white p-6 space-y-4">
+                        <p class="text-gray-600">EMarg ERP enables user to backup all the data on Google Drive & One
+                            Drive. Users can access the data from anywhere and restore the backup as per the
+                            requirement.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Sales Map -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://neilpatel.com/wp-content/uploads/2017/10/google-maps-promoted-pins.jpg"
+                            alt="Sales Tracking Map"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            Sales on Google Map
+                        </span>
+                    </div>
+                    <div class="bg-white p-6 space-y-4">
+                        <p class="text-gray-600">Track Your Sales through Google Satellite Map. Filter data: Date,
+                            Route, Company & Salesman wise. Find new Customer & Grow your business.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 - WhatsApp Integration -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://freescout.net/wp-content/uploads/edd/2021/05/freescout-whatsapp-integration-module.png"
+                            alt="WhatsApp Integration"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            WhatsApp Integration
+                        </span>
+                    </div>
+                    <div class="bg-white p-6 space-y-4">
+                        <p class="text-gray-600">Now send Invoices, Outstanding's, Ledger Balances, Sale/Purchase Order,
+                            Reminders etc directly on customer’s WhatsApp through Marg ERP Software. Exclusively
+                            available with Marg Home Edition Version.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 3rd row -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+
+                <!-- Card 1 - Cloud Backup -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://i.etsystatic.com/29965959/r/il/faae82/3723391486/il_570xN.3723391486_ajdp.jpg"
+                            alt="Cloud Backup"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            My Shop QR Code
+                        </span>
+                    </div>
+
+
+
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">A revolutionary way of Contactless Business. Give your customers
+                                the privilege of ordering just by scanning the code. Print QR code & paste outside your
+                                shop/counter. Customers can directly scan & place orders.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - E-Invoicing -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2017-06/27/full/1498506198-3892.jpg"
+                            alt="E-Invoicing"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            eRetail Web Application
+                        </span>
+                    </div>
+
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">Retailers can now place online orders directly to Distributors from
+                                Marg ERP Software.
+                                Check the status of all Orders, View nearby Retailer, Compare Best Deals. Save Time &
+                                Efforts & much more.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 - E-Invoicing -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="E-Invoicing"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
+                        <span
+                            class="absolute top-4 right-4 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium shadow-lg">
+                            Direct Calling
+                        </span>
+                    </div>
+
+                    <div class="bg-white p-6 space-y-4">
+                        <div class="flex items-center">
+                            <p class="text-gray-600">A unique feature to Call Customers Directly from Computer at just 1
+                                Click. Easily connect the computer with your mobile and place calls to
+                                customers/parties. This automated process saves time & reduces manual work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  feature section -->
+
+    <!-- Achievements Section -->
+    <section class="py-24 bg-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <!-- Years of Experience -->
+                <div class="p-6 fade-in-up">
+                    <div class="mb-4 flex justify-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2 count">21</h3>
+                    <p class="text-red-100 uppercase font-semibold text-sm">Years Experience</p>
+                </div>
+
+                <!-- Happy Clients -->
+                <div class="p-6 fade-in-up">
+                    <div class="mb-4 flex justify-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2 count">5124</h3>
+                    <p class="text-red-100 uppercase font-semibold text-sm">Happy Clients</p>
+                </div>
+
+                <!-- Business Growth -->
+                <div class="p-6 fade-in-up">
+                    <div class="mb-4 flex justify-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2 count">245</h3>
+                    <p class="text-red-100 uppercase font-semibold text-sm">% Growth</p>
+                </div>
+
+                <!-- Projects Done -->
+                <div class="p-6 fade-in-up">
+                    <div class="mb-4 flex justify-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-2 count">8956</h3>
+                    <p class="text-red-100 uppercase font-semibold text-sm">Projects Done</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- carrier section -->
+    <section id="career" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="text-center mb-20">
+                <span class="text-red-600 font-semibold uppercase tracking-wide">Join Our Team</span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-bold text-gray-800">
+                    Career <span
+                        class="bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">Opportunities</span>
+                </h2>
+            </div>
+
+            <!-- Careers Grid -->
+            <div class="grid gap-8 max-w-3xl mx-auto">
+                <!-- Job Listing 1 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Sales and Marketing</h3>
+                                <div class="flex items-center space-x-4 text-gray-600">
+                                    <span class="flex items-center">
+                                        <svg class="w-5 h-5 mr-1 text-red-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        Nagpur
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Sales</span>
+                        </div>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Excellent communication, negotiation, and leadership skills
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Proven experience in B2B/B2C sales and marketing strategies
+                            </div>
+                        </div>
+
+                        <a onclick="openModal('Sales and Marketing')"
+                            target="_blank"
+                            class="inline-flex items-center px-6 py-3 bg-gradient-to-br from-red-600 to-red-400 text-white rounded-lg hover:opacity-90 transition-opacity">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884" />
+                            </svg>
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Listing 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Developer</h3>
+                                <div class="flex items-center space-x-4 text-gray-600">
+                                    <span class="flex items-center">
+                                        <svg class="w-5 h-5 mr-1 text-red-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        Nagpur
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Tech</span>
+                        </div>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                .NET developer
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Flutter Developer
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                MS SQL
+                            </div>
+                        </div>
+
+                        <a onclick="openModal('Developer')"
+                            target="_blank"
+                            class="inline-flex items-center px-6 py-3 bg-gradient-to-br from-red-600 to-red-400 text-white rounded-lg hover:opacity-90 transition-opacity">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884" />
+                            </svg>
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Listing 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-red-50 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
+                    </div>
+                    <div class="relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Marketing Manager</h3>
+                                <div class="flex items-center space-x-4 text-gray-600">
+                                    <span class="flex items-center">
+                                        <svg class="w-5 h-5 mr-1 text-red-600" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        Nagpur
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Marketing</span>
+                        </div>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Knowledge of CRM tools and sales tracking systems
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                                Strong expertise in strategic marketing and campaign planning
+                            </div>
+                        </div>
+
+                        <a onclick="openModal('Marketing Manager')"
+                            target="_blank"
+                            class="inline-flex items-center px-6 py-3 bg-gradient-to-br from-red-600 to-red-400 text-white rounded-lg hover:opacity-90 transition-opacity">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884" />
+                            </svg>
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white select-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 fade-in-up">
+                <!-- Contact Details -->
+                <div class="space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                        Get in <span class="text-red-600">Touch</span>
+                    </h2>
+
+                    <!-- WhatsApp Contact -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">WhatsApp</h3>
+                            <a href="https://wa.me/919850350944"
+                                class="text-gray-600 hover:text-red-600 transition-colors">
+                                +91 98503 50944
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Phone Numbers -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Phone Numbers</h3>
+                            <div class="space-y-1">
+                                <a href="tel:+919850350944"
+                                    class="block text-gray-600 hover:text-red-600 transition-colors">
+                                    +91 98503 50944
+                                </a>
+                                <a href="tel:+919561665257"
+                                    class="block text-gray-600 hover:text-red-600 transition-colors">
+                                    +91 95616 65257
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                            <a href="mailto:softprosoftwaresolution@gmail.com"
+                                class="text-gray-600 hover:text-red-600 transition-colors">
+                                softprosoftwaresolution@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Office Address</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                70 Shesh Nagar,<br> Near Amar Nagar,<br> Manewada Ring Road,<br> Nagpur
+                                Maharashtra, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-red-50 rounded-xl p-8 shadow-lg" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 mb-2">Your Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- footer -->
+    <footer class="bg-red-600 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <img src="./logo.jpg" alt="logo" class="rounded-full">
+
+                </div>
+
+                <div class="space-y-4 select-none" >
+                    <!-- <img src="./logo.jpg" alt=""> -->
+                    <h3 class="text-2xl font-bold mb-4">SOFTPRO</h3>
+                    <p class="text-red-100">
+                        70 Shesh Nagar, Near Amar Nagar, Manewada Ring Road,<br>
+                        Maharashtra, India
+                    </p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-red-100">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            +91 98503 50944
+                        </p>
+                        <p class="flex items-center text-red-100">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            softprosoftwaresolution@gmail.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Useful Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-red-200 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-red-200 transition-colors">About </a></li>
+                        <li><a href="#services" class="hover:text-red-200 transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-red-200 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-red-200 transition-colors">Android & iOS Application</a></li>
+                        <li><a href="#" class="hover:text-red-200 transition-colors">Web Application</a></li>
+                        <li><a href="#" class="hover:text-red-200 transition-colors">Desktop Application</a></li>
+                        <li><a href="#" class="hover:text-red-200 transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-red-200 transition-colors">API Development & Integration</a>
+                        </li>
+                        <li><a href="#" class="hover:text-red-200 transition-colors">QA & Testing Services</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-red-500 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="#" class="text-white hover:text-red-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-red-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-red-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-red-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- <div class="text-center text-red-100">
+                        © Copyright <strong>softprosoftware solution</strong> All Rights Reserved<br>
+                        Designed by DevEraa Dist Nagpur
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrier form popup -->
+    <div id="applyModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 overflow-y-auto">
+        <div class="relative min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Apply Now</h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="applicationForm" onsubmit="submitForm(event)">
+                    <input type="hidden" id="jobRole" name="jobRole">
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" name="name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+                            <input type="tel" name="mobile" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Position Applying For</label>
+                            <input type="text" id="displayJobRole" readonly
+                                class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="mt-6 w-full px-6 py-3 bg-gradient-to-br from-red-600 to-red-400 text-white rounded-lg hover:opacity-90 transition-opacity">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- form script -->
+    <script>
+        function openModal(position) {
+            document.getElementById('jobRole').value = position;
+            document.getElementById('displayJobRole').value = position;
+            document.getElementById('applyModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('applyModal').classList.add('hidden');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const message = `New Application:\n\n
+Name: ${data.name}\n
+Email: ${data.email}\n
+Mobile: ${data.mobile}\n
+Position: ${data.jobRole}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/919850350944?text=${encodedMessage}`, '_blank');
+            closeModal();
+            event.target.reset();
+        }
+    </script>
+
+<!-- counter -->
+    <script>
+        // Counter Animation
+        function animateCounter(counter) {
+            const target = parseInt(counter.textContent);
+            const duration = 2000; // Animation duration in ms
+            let start = null;
+
+            const updateCounter = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const percentage = Math.min(progress / duration, 1);
+                const current = Math.floor(percentage * target);
+
+                counter.textContent = current;
+
+                if (percentage < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target; // Remove '+' if not needed
+                }
+            };
+
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Intersection Observer for scroll trigger
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target.querySelector('.count');
+                    animateCounter(counter);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.fade-in-up').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+
+<!-- responsive menu -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- AOS Initialization Script -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 120
+        });
+    </script>
+
+       <!-- Disable Right Click -->
+       <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    
+        // Disable Keyboard Shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Block Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+            // Block Ctrl+S (Save Page)
+            if (e.ctrlKey && e.keyCode === 83) {
+                e.preventDefault();
+            }
+            // Block F12 (Dev Tools)
+            if (e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+        </script>
+
+        <!-- JavaScript to Control Loader -->
+<script>
+    window.addEventListener('load', function() {
+        // Hide loader when page is fully loaded
+        document.getElementById('pageLoader').style.opacity = '0';
+        setTimeout(function() {
+            document.getElementById('pageLoader').style.display = 'none';
+        }, 300); // Match transition duration
+    });
+    
+    // Optional: Show loader immediately when page starts unloading (for page transitions)
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('pageLoader').style.display = 'flex';
+    });
+    </script>
+
+    <button class="floating-btn pulse" onclick="window.open('https://wa.me/919850350944', '_blank')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.15-1.18s-.22-.16-.47-.28z" />
+        </svg>
+    </button>
+</body>
+
+</html>
